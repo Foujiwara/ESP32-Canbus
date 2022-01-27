@@ -170,13 +170,13 @@ void SerialConsole::handleShortCmd()
         break;
     case '~':
         Serial.println("DEBUGGING MODE!");
-        //CAN0.setDebuggingMode(true);
-        //CAN1.setDebuggingMode(true);
+        CAN0.debuggingMode = true;
+        CAN1.debuggingMode = true;
         break;
     case '`':
         Serial.println("Normal mode");
-        //CAN0.setDebuggingMode(false);
-        //CAN1.setDebuggingMode(false);
+        CAN0.debuggingMode = false;
+        CAN1.debuggingMode = false;
         break;    
     default:
         if (settings.enableLawicel) lawicel.handleShortCmd(cmdBuffer[0]);

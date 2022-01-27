@@ -85,6 +85,7 @@ public:
 
   friend void CAN_WatchDog_Builtin( void *pvParameters );
 
+  bool debuggingMode = false;
   
 
 protected:
@@ -97,7 +98,6 @@ private:
   int txBufferSize;
   int rxBufferSize;
   
-  bool debuggingMode = false;
 
 };
 
